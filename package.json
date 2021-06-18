@@ -1,0 +1,37 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "mern-stack-project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "index": "nodemon index",
+    "redux-blogs": "npm start --prefix redux-blogs",
+    "dev": "concurrently \"npm run index\" \"npm run redux-blogs\"",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix redux-blogs && npm run build --prefix redux-blogs"
+  },
+  "author": "shery shawky",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.1",
+    "gravatar": "^1.8.1",
+    "gridfs-stream": "^1.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "sharp": "^0.28.2",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.0.2",
+    "nodemon": "^2.0.7"
+  }
+}
